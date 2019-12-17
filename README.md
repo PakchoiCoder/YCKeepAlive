@@ -1,2 +1,1 @@
-# YcWanAndroid
-kotlin版本玩Android客户端
+# Android进程保活方案研究和实践
