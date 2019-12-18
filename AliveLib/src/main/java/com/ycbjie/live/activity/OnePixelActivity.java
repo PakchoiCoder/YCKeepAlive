@@ -15,7 +15,7 @@ import android.view.WindowManager;
  *     blog  : https://github.com/yangchong211
  *     time  : 2019/9/19
  *     desc  : 一像素Activity
- *     revise:
+ *     revise: 用final修饰，避免被继承
  * </pre>
  */
 public final class OnePixelActivity extends Activity {

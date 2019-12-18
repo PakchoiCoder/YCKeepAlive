@@ -127,6 +127,7 @@ public final class LocalService extends Service {
             Intent intent3 = new Intent(this, RemoteService.class);
             mIsBoundRemoteService = this.bindService(intent3, mConnection, Context.BIND_ABOVE_CLIENT);
         } catch (Exception e) {
+            e.printStackTrace();
         }
         //隐藏服务通知
         try {
@@ -134,6 +135,7 @@ public final class LocalService extends Service {
                 startService(new Intent(this, HideForegroundService.class));
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
         if (YcKeepAlive.sKeepLiveService != null) {
             YcKeepAlive.sKeepLiveService.onWorking();
