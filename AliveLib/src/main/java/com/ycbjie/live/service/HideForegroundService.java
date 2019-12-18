@@ -45,7 +45,11 @@ public class HideForegroundService extends Service {
         if (YcKeepAlive.sForegroundNotification != null) {
             Intent intent = new Intent(getApplicationContext(), NotificationClickReceiver.class);
             intent.setAction(YcConstant.ACTION_CLICK_NOTIFICATION);
-            Notification notification = NotificationUtils.createNotification(this, YcKeepAlive.sForegroundNotification.getTitle(), YcKeepAlive.sForegroundNotification.getDescription(), YcKeepAlive.sForegroundNotification.getIconRes(), intent);
+            Notification notification = NotificationUtils.createNotification(
+                    this, YcKeepAlive.sForegroundNotification.getTitle(),
+                    YcKeepAlive.sForegroundNotification.getDescription(),
+                    YcKeepAlive.sForegroundNotification.getIconRes(),
+                    intent);
             startForeground(YcConstant.KEY_NOTIFICATION_ID, notification);
         }
     }
